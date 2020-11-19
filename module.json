@@ -1,11 +1,11 @@
 {
-  "name": "module",
-  "title": "New Module",
-  "description": "",
+  "name": "LPTips",
+  "title": "Landing Page Tips",
+  "description": "A simple module to display tips to your players while they wait on your landing page for the game to start!",
   "version": "0.0.1",
-  "minimumCoreVersion": "0.6.2",
-  "compatibleCoreVersion": "0.7.2",
-  "author": "Cody Swendrowski <cody@swendrowski.us>",
+  "minimumCoreVersion": "0.7.7",
+  "compatibleCoreVersion": "0.7.7",
+  "author": "Vasileios Stratigakis",
   "dependencies": [
 
   ],
@@ -25,7 +25,7 @@
       "path": "languages/en.json"
     }
   ],
-  "url": "https://github.com/cswendrowski/FoundryVTT-module",
+  "url": "https://github.com/Vass1979/LPTips",
   "manifest": "https://github.com/cswendrowski/FoundryVTT-module/releases/download/latest/module.json",
   "download": "https://github.com/cswendrowski/FoundryVTT-module/releases/download/0.0.1/module.zip"
 }

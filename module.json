@@ -8,11 +8,11 @@
     "author": "Vasileios Stratigakis",
     "dependencies": [],
     "esmodules": [
-        "/scripts/module.js"
+        "/scripts/module.js",
+        "/scripts/settings.js"
     ],
     "scripts": [
-        "/scripts/lib/lib.js",
-        "/scripts/settings.js"
+        "/scripts/lib/lib.js"
     ],
     "styles": [
         "/styles/module.css"

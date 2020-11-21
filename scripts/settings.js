@@ -12,6 +12,19 @@ const SETTINGS = [
             config: true,
             restricted: true,
         }
+    },
+
+    {
+        key: "landingPageDelay",
+        data: {
+            name: "Amount of delay:",
+            hint: "Amount of delay in seconds before cycling to the next tip in the database",
+            type: Number,
+            default: 5,
+            scope: "world",
+            config: true,
+            restricted: true,
+        }
     }
    
 ];

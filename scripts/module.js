@@ -1,22 +1,18 @@
 import { registerSettings } from "./settings.js";
-Hooks.on("init", async () => await registerSettings());
 
-Hooks.once('ready', async function() {
-
-    
-
-    console.log('CAN YOU SEE THIS?');
-    // ui.notification.notify('This is a bloody notification');
-    ui.notifications.info("This is an info message");
-});
-
-let lptMessages = [ //This is where we store the messages to display. Will move to config at some point.
-    'This is a message',
-    'This is another message'
+const msgArray = [
+    "This is one hint",
+    "This is a second hint",
+    "OMG a third hint has appeared!!!"
 ];
+const randomMSG = msgArray[Math.floor(Math.random() * msgArray.length)];
 
 export default class MessageWindow extends Application {
 
+    constructor(msgArray){
+        super();
+        this.msg = msgArray;
+    }
     static get defaultOptions() {
         return {
             ...super.defaultOptions,
@@ -25,10 +21,25 @@ export default class MessageWindow extends Application {
             resizable : false,
             height : "auto",
             width : 400,
-            minimizable : true,
-            title : "LPTips Message"
+            minimizable : false,
+            title : ""
         }
     }
-}
 
-new MessageWindow();
+    getData() {
+        return {
+          messages: this.msg,
+          myValue: randomMSG
+      };
+    }
+}
+Hooks.on("init", async () => await registerSettings());
+
+Hooks.once('ready', async function() {
+
+    new MessageWindow(msgArray).render(true);
+    console.log('CAN YOU SEE THIS?');
+    // ui.notification.notify('This is a bloody notification');
+    // ui.notifications.info("This is an info message");
+});
+
